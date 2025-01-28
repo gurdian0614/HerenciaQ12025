@@ -66,17 +66,40 @@ switch (opcion)
 
     case 2:
         Console.WriteLine("Escriba el nombre:");
-        vertebrado.Nombre = Console.ReadLine();
+        invertebrado.Nombre = Console.ReadLine();
 
         Console.WriteLine("Escriba el color:");
-        vertebrado.Color = Console.ReadLine();
+        invertebrado.Color = Console.ReadLine();
 
         Console.WriteLine("Escriba el tamaño:");
-        vertebrado.Tamano = Console.ReadLine();
+        invertebrado.Tamano = Console.ReadLine();
 
         Console.WriteLine("Escriba la Familia:");
-        vertebrado.Familia = Console.ReadLine();
+        invertebrado.Familia = Console.ReadLine();
 
+        Console.WriteLine("Tipo de animal invertebrado:");
+        invertebrado.Tipo = Console.ReadLine();
+
+        Console.WriteLine("¿Tiene patas? (s/n)");
+        tienePatas = Console.ReadLine();
+
+        if (tienePatas.ToLower() == "s")
+        {
+            invertebrado.TienePatas = true;
+
+            Console.WriteLine("Número de patas");
+            invertebrado.NumeroPatas = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.WriteLine("¿Tiene concha? (s/n)");
+        tieneConcha = Console.ReadLine();
+
+        if (tieneConcha.ToLower() == "s")
+        {
+            invertebrado.TieneConcha = true;
+        }
+
+        invertebrado.Imprimir();
         break;
 
     default:
